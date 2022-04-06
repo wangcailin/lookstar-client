@@ -45,7 +45,14 @@ trait InteractWithHttpClient
     {
         return $this->request($url, 'PUT', ['json' => $data, 'headers' => $this->getAuthHeaders()]);
     }
-
+    /**
+     * @param string $url
+     * @param string $method
+     * @param array $options headers和body
+     * @param false $returnRaw
+     * @return \Psr\Http\Message\ResponseInterface
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     protected function request(string $url, string $method = 'GET', array $options = [], $returnRaw = false)
     {
         $method = strtoupper($method);

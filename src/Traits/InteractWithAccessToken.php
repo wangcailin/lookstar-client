@@ -38,7 +38,9 @@ trait InteractWithAccessToken
                 'client_id' => $this->clientId,
                 'client_secret' => $this->clientSecret,
                 'scope' => '*'
-            ]]
+            ],
+            'headers'  =>[ 'X-Tenant'  => $this->tenantId,]
+            ]
         );
         $obj = json_decode($response->getBody()->getContents(), true);
         $obj['time'] = time();
