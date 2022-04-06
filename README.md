@@ -10,7 +10,7 @@ Lookstar 是一个通用的 Composer 包，所以不需要对框架单独做修�
 ## 安装
 
 ```sh
-composer require bluedot/middle-platform-sdk -vvv
+composer require bluedot/lookstar -vvv
 ```
 
 # 使用
@@ -24,10 +24,12 @@ use Lookstar\ApiClient;
 
 $clientId = ''; // 第三方用户唯一凭证
 $clientSecret = ''; // 第三方用户唯一凭证密钥，即 appsecret
-$domain = 'bluedot.lookstar.com.cn'; // 租户域名
-$prefix = '/api'; // 生产{api}/测试{api-dev}环境
+$tenantId = ''; // 租户ID
 
-$apiClient = new ApiClient($clientId, $clientSecret, $domain, $prefix = '/api');
+$domain = 'api.lookstar.com.cn'; // 域名 // 生产{api}/测试{api-beta}环境
+$prefix = ''; //
+
+$apiClient = new ApiClient($clientId, $clientSecret, $tenantId, $domain, $prefix = '/api');
 ```
 
 ## API 调用
