@@ -10,7 +10,7 @@ class ApiClient
     use \Lookstar\Traits\InteractWithHttpClient;
     use \Lookstar\Traits\InteractWithCheckEnv;
 
-    public function __construct($clientId, $clientSecret, $tenantId, $domain = 'api.lookstar.com.cn', $prefix = '/open-api')
+    public function __construct($clientId, $clientSecret, $tenantId, $domain = 'api.lookstar.com.cn', $prefix = '')
     {
         $clientId = trim($clientId);
         $clientSecret = trim($clientSecret);
