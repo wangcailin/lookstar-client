@@ -57,7 +57,7 @@ trait InteractWithHttpClient
     {
         $method = strtoupper($method);
 
-        $response = $this->getHttpClient()->request($method, 'http://' . $this->domain . $this->prefix . $url, $options);
+        $response = $this->getHttpClient()->request($method, 'https://' . $this->domain . $this->prefix . $url, $options);
         return $response;
     }
 

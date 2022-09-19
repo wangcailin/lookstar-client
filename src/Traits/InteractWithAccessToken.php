@@ -4,7 +4,7 @@ namespace Lookstar\Traits;
 
 trait InteractWithAccessToken
 {
-    protected $accessTokenUrl = '/oauth/token';
+    protected $accessTokenUrl = '/tenant/oauth/token';
 
     public function accessToken()
     {
@@ -33,13 +33,14 @@ trait InteractWithAccessToken
         $response = $this->request(
             $this->accessTokenUrl,
             'POST',
-            ['form_params' => [
-                'grant_type' => 'client_credentials',
-                'client_id' => $this->clientId,
-                'client_secret' => $this->clientSecret,
-                'scope' => '*'
-            ],
-            'headers'  =>[ 'X-Tenant'  => $this->tenantId,]
+            [
+                'form_params' => [
+                    'grant_type' => 'client_credentials',
+                    'client_id' => $this->clientId,
+                    'client_secret' => $this->clientSecret,
+                    'scope' => '*'
+                ],
+                'headers'  => ['X-Tenant'  => $this->tenantId,]
             ]
         );
         $obj = json_decode($response->getBody()->getContents(), true);
