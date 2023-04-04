@@ -1,6 +1,6 @@
 <?php
 
-namespace Lookstar\Traits;
+namespace LookstarClient\Traits;
 
 use GuzzleHttp\Client as GuzzleHttpClient;
 

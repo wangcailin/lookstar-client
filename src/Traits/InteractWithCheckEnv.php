@@ -1,8 +1,8 @@
 <?php
 
-namespace Lookstar\Traits;
+namespace LookstarClient\Traits;
 
-use Lookstar\Exceptions\ClientException;
+use LookstarClient\Exceptions\ClientException;
 
 trait InteractWithCheckEnv
 {

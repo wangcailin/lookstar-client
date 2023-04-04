@@ -1,6 +1,6 @@
 <?php
 
-namespace Lookstar\Exceptions;
+namespace LookstarClient\Exceptions;
 
 class ClientException extends \Exception
 {

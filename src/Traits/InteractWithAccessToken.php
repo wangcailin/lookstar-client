@@ -1,6 +1,6 @@
 <?php
 
-namespace Lookstar\Traits;
+namespace LookstarClient\Traits;
 
 trait InteractWithAccessToken
 {

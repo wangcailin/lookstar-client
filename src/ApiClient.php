@@ -1,14 +1,14 @@
 <?php
 
-namespace Lookstar;
+namespace LookstarClient;
 
-use Lookstar\Exceptions\ClientException;
+use LookstarClient\Exceptions\ClientException;
 
 class ApiClient
 {
-    use \Lookstar\Traits\InteractWithAccessToken;
-    use \Lookstar\Traits\InteractWithHttpClient;
-    use \Lookstar\Traits\InteractWithCheckEnv;
+    use \LookstarClient\Traits\InteractWithAccessToken;
+    use \LookstarClient\Traits\InteractWithHttpClient;
+    use \LookstarClient\Traits\InteractWithCheckEnv;
 
     public function __construct($clientId, $clientSecret, $tenantId, $domain = 'api.lookstar.com.cn', $prefix = '')
     {
