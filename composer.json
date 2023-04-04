@@ -1,8 +1,8 @@
 {
-  "name": "bluedot/lookstar",
+  "name": "bluedot/lookstar-client",
   "autoload": {
     "psr-4": {
-      "Lookstar\\": "src/"
+      "LookstarClient\\": "src/"
     }
   },
   "license": "MIT",

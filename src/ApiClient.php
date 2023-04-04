@@ -25,7 +25,6 @@ class ApiClient
             throw new ClientException("tenantId is empty");
         }
 
-
         $this->clientId = $clientId;
         $this->clientSecret = $clientSecret;
         $this->tenantId = $tenantId;
