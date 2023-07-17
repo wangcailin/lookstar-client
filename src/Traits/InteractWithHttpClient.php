@@ -58,7 +58,7 @@ trait InteractWithHttpClient
         $method = strtoupper($method);
 
         $response = $this->getHttpClient()->request($method, 'https://' . $this->domain . $this->prefix . $url, $options);
-        return json_decode($response->getBody()->getContents());
+        return json_decode($response->getBody()->getContents(), true);
     }
 
     private function getHttpClient()
