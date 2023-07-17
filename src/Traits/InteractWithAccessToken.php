@@ -43,10 +43,9 @@ trait InteractWithAccessToken
                 'headers'  => ['X-Tenant'  => $this->tenantId,]
             ]
         );
-        $obj = json_decode($response->getBody()->getContents(), true);
-        $obj['time'] = time();
-        @file_put_contents($this->getFilePath(), json_encode($obj));
-        return $obj;
+        $response['time'] = time();
+        @file_put_contents($this->getFilePath(), json_encode($response));
+        return $response;
     }
 
     /**
